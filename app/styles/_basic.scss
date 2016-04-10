@@ -4,44 +4,38 @@ body {
 }
 
 .header {
-/*    max-width: 100%;*/
-    overflow: hidden;
-/*    padding: 20px 10px 20px 10px;*/
-/*    display: inline-block;*/
-    
+    padding: 25px 0;
+    border-bottom: 1px solid gray;
 }
 
 .header__logo {
     text-align: left;
     display: block;
     vertical-align: middle;
-    float: left;
-    padding-left: 0px;
-}
-
-.header__logo img {
-    padding: 20px 0px 20px 0px;
-    vertical-align: middle;
 }
 
 .header__user {
-    text-align: right;
-    display: block;
-    float: right;
+    
+    p {
+        padding-left: 20px;
+        background: url(../img/airplane_circle_desk.png) no-repeat left center;
+        float: right;
+        
+        &::after {
+            content: url(../img/arrow_down_desk.png);
+        }
+    }
+    
 }
+//
+//.line {
+//    max-width: 100%;
+//    height: 1px;
+//    background-color: #ebf1f5;
+//    margin: 0;
+//}
 
-.header__user img {
-    text-align: center;
-}
-
-.line {
-    max-width: 100%;
-    height: 1px;
-    background-color: #ebf1f5;
-    margin: 0;
-}
-
-.nav {
+nav {
 /*    max-width: 100%;*/
     vertical-align: middle;
     margin-top: 35px;
@@ -50,6 +44,38 @@ body {
     border-style: solid;
     color: #d2e1e6;
     border-radius: 2px;
+}
+
+.steps {
+    
+    div {
+        position: relative;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        
+        &::before {
+            border: 4px solid gray;
+            border-radius: 100%;
+            width: 26px;
+            height: 26px;
+            text-align: center;
+            margin-right: 10px;
+            vertical-align: middle;
+            content: attr(data-number);
+            display: inline-block;
+        }
+        
+        &.checked:before {
+            content: url(../img/check_desk.png);
+        }
+      
+        &:not(:last-child)::after {
+            content: url(../img/nav_arrow.png);
+            position: absolute;
+            top: 0;
+            right: -6px;
+        }
+    }
 }
 
 .main__confirm {

@@ -14,64 +14,55 @@
     
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     
-    <link type="text/css" rel="stylesheet" href="styles/reset.css">
-    <link type="text/css" rel="stylesheet" href="styles/style.css">
+    <link type="text/css" rel="stylesheet" href="styles/main.css">
     
      <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon"/> 
     
 </head>
 <body>
     
-    <header class="container">
-        <div class="row">
-<!--
-            <div class="col-md-6 col-md-offset-3 
-                        col-sm-8 col-sm-offset-2 
-                        col-xs-10 col-xs-offset-1">            
--->
+    <section class="header">
+        <header class="container">
 
-            <div class="col-md-6 header__logo">
-                <img src="img/airhelp_logo_desk.png" alt="Logo">
+            <div class="row">
+    <!--
+                <div class="col-md-6 col-md-offset-3 
+                            col-sm-8 col-sm-offset-2 
+                            col-xs-10 col-xs-offset-1">            
+    -->
+
+                <div class="col-md-6 header__logo">
+                    <img src="img/airhelp_logo_desk.png" alt="Logo">
+                </div>
+
+                <div class="col-md-6 header__user">
+                    <p>Joe Smith</p>
+                </div>
             </div>
 
-            <div class="col-md-6 header__user">
-                <img src="img/airplane_circle_desk.png" alt="Airplane"> 
-                <p>Joe Smith</p> 
-                <img src="img/arrow_down_desk.png" alt="arrow">
-            </div>
-        </div>
         
 
-    </header>
+        </header>   
+    </section>
     
-    <div class="line">&nbsp;</div>
+<!--    <div class="line">&nbsp;</div>-->
     
-        <nav>
-
-    </nav>     
+   
     
     <main class="container">
-        <div class="row">
+        <nav class="row steps">
+            <div data-number="1" class="col-md-4 checked">Choose payout method</div>
+
+            <div class="col-md-4" data-number="2">Set up payout method</div>
+
+            <div class="col-md-4" data-number="3">Review and confirm</div>
+        </nav>
         
-
-            <div class="col-md-12 nav">
-
-                <img src="img/check_desk.png" alt="Check"><p>Choose payout method</p>
-
-                <img src="img/nav_arrow.png" alt="arrow">
-
-                <p>Set up payout method</p>
-
-                <img src="img/nav_arrow.png" alt="arrow">
-
-                <p>Review and confirm</p>
-
-
-            </div>
-            
-            
+        <div class="row">
             <div class="col-md-12 main__confirm">You selected Bank Transfer.</div>
-            
+        </div>
+        
+        <div class="row">
             
             <div class="col-md-8 col-md-offset-2 tcenter">
         
