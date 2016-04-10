@@ -3,9 +3,13 @@ body {
     font-family: "Open sans", Arial, sans-serif;
 }
 
+
+//****************** HEADER *******************
+
+
 .header {
     padding: 25px 0;
-    border-bottom: 1px solid gray;
+    border-bottom: 1px solid #d2e1e6;
 }
 
 .header__logo {
@@ -27,17 +31,14 @@ body {
     }
     
 }
-//
-//.line {
-//    max-width: 100%;
-//    height: 1px;
-//    background-color: #ebf1f5;
-//    margin: 0;
-//}
+
+
+//****************** NAV *******************
 
 nav {
 /*    max-width: 100%;*/
     vertical-align: middle;
+    text-align: center;
     margin-top: 35px;
     border: 1px;
     border-color: #d2e1e6;
@@ -50,14 +51,14 @@ nav {
     
     div {
         position: relative;
-        padding-top: 10px;
-        padding-bottom: 10px;
+        padding-top: 19px;
+        padding-bottom: 19px;
         
         &::before {
-            border: 4px solid gray;
+            border: 3px solid #d2e1e6;
             border-radius: 100%;
-            width: 26px;
-            height: 26px;
+            width: 20px;
+            height: 20px;
             text-align: center;
             margin-right: 10px;
             vertical-align: middle;
@@ -77,6 +78,9 @@ nav {
         }
     }
 }
+
+
+//****************** MAIN *******************
 
 .main__confirm {
     background-color: #f2faf9;
