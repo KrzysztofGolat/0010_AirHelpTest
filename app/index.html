@@ -40,8 +40,6 @@
                 </div>
             </div>
 
-        
-
         </header>   
     </section>
     
@@ -64,7 +62,7 @@
         
         <div class="row">
             
-            <div class="col-md-8 col-md-offset-2 tcenter">
+            <div class="col-md-8 col-md-offset-2 main__content">
         
                 <h1>Complete the form below to continue:</h1>
 
@@ -101,9 +99,11 @@
                 </div>
             </div>
 
-            <label class="col-sm-12">                
-                <h2>2. Account owner information</h2>
-            </label>
+            <div class="row">
+                <label class="col-sm-12">                
+                    <h2>2. Account owner information</h2>
+                </label>
+            </div>
 
             <div class="row form__padd-bot1">
             <div class="col-xs-6">
@@ -144,20 +144,41 @@
             </div>
             </div>  
 
-            <label class="col-sm-12">
-                <h2>3. Bank account information</h2>
-            </label>
-
-            <div class="row form__padd-bot2">
-            <div class="col-xs-8">
-            <input type="text" class="form-control" placeholder="Country of your bank">
+            <div class="row">
+                <label class="col-sm-12">
+                    <h2>3. Bank account information</h2>
+                </label>
             </div>
+
+            
+            <div class="row">
+                <div class="col-xs-8 form__padd-bot2">
+                  <select class="form-control">          
+                    <option default>Country of your bank</option>
+                    <option default>Poland</option>
+                  </select>
+                </div>
+                <div class="col-xs-8  form__padd-bot2">
+                    <input type="text" class="form-control" placeholder="BIC / SWIFT code">
+                </div>
+
+                <div class="col-xs-8 form__padd-bot2">
+                    <input type="text" class="form-control" placeholder="IBAN (bank account number)">
+                </div>
             </div>  
 
+            
+        <div class="row">
+              <fieldset class="col-xs-12 form__padd-bot2">
+                    <textarea class="form-control" id="exampleTextarea" rows="4" placeholder="Additional information (optional)"></textarea>
+            </fieldset>
+        </div>
+            
+            
             <div class="form-group row">
-            <div class="col-sm-offset-2 col-sm-10">
-              <button type="submit" class="btn btn-secondary">Sign in</button>
-            </div>
+                <div class="col-sm-offset-2 col-sm-10">
+                    <button type="submit" class="btn btn-secondary">Sign in</button>
+                </div>
             </div>
                     
         </form>
@@ -168,15 +189,51 @@
     </main>
     
     
-    
-    <footer></footer>    
+    <div class="container-fluid footer">
+        <footer class="container" >
+            <div class="row">
+               <div class="col-xs-12">
+
+                   <div class="col-xs-10">  
+                        <!-- EN / EUR-->
+                            
+                       <form>
+                         <fieldset class="form-group">
+                            <select class="form-control" id="exampleSelect1">
+                                  <option>EN / EUR</option>
+                            </select>
+                        </fieldset>
+                       </form>
+                       
+<!--
+                   </div>
+
+                   <span class="col-xs-8">  
+-->
+                        <a href=".">Homepage</a>
+                        <a href=".">Air Passenger Rights</a>
+                        <a href=".">FAQ</a>
+                        <a href=".">Terms and conditions</a>
+                        <a href=".">Contacts</a>
+                   </span>
+                        
+                </div>
+                
+                  <div class="col-xs-2">  
+                        2016 AirHelp
+                   </div>
+
+
+            </div>
+        </footer>    
+    </div>
     
     
     
         
-<!--    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript" charset="utf-8"></script>-->
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript" charset="utf-8"></script>
     
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 
 </body>
 </html>

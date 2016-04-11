@@ -122,8 +122,15 @@ nav {
   border-radius: 2px;
   font-size: 14px; }
 
-.tcenter {
+.main__content {
   text-align: center; }
+  .main__content a, .main__content a:hover {
+    color: #21ad91;
+    margin-top: 9px;
+    display: block;
+    margin-bottom: 75px;
+    text-decoration: underline;
+    font-weight: 600; }
 
 h1 {
   font-size: 28px;
@@ -138,25 +145,18 @@ h1 {
   line-height: 2em;
   font-weight: 600; }
 
-a, a:hover {
-  color: #21ad91;
-  margin-top: 9px;
-  display: block;
-  margin-bottom: 75px;
-  text-decoration: underline;
-  font-weight: 600; }
-
 .formframe {
   max-width: 100%;
   /*    vertical-align: middle;*/
   margin-top: 35px;
+  margin-bottom: 80px;
   border: 1px;
   border-color: #d2e1e6;
   border-style: solid;
   color: #d2e1e6;
   border-radius: 2px;
   text-align: left;
-  padding: 65px 85px 80px 85px; }
+  padding: 65px 85px 20px 85px; }
 
 div.radio {
   background-color: red; }
@@ -173,3 +173,18 @@ h2 {
   margin-bottom: 35px;
   margin-top: 30px;
   color: #536273; }
+
+.footer {
+  border-top: 1px solid #d2e1e6;
+  font-size: 12px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  color: #536273; }
+  .footer a {
+    text-decoration: none;
+    padding-right: 10px;
+    color: #536273; }
+
+footer .form-control {
+  width: 90px;
+  font-size: 12px; }
