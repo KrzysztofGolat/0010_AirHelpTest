@@ -167,6 +167,22 @@ div.radio {
 .form__padd-bot2 {
   padding-bottom: 20px; }
 
+.form__padd-bot3 {
+  padding-bottom: 60px; }
+
+.form__textarea {
+  height: 120px !important; }
+
+.btn-secondary {
+  color: white;
+  font-weight: 600;
+  font-size: 12px;
+  width: 135px;
+  height: 50px;
+  float: right;
+  margin-bottom: 40px;
+  background-color: #b6e2d9; }
+
 h2 {
   font-size: 18px;
   font-weight: 600;
@@ -184,7 +200,17 @@ h2 {
     text-decoration: none;
     padding-right: 10px;
     color: #536273; }
+  .footer__copyright {
+    vertical-align: bottom !important;
+    text-align: right;
+    height: 32px; }
 
 footer .form-control {
   width: 90px;
-  font-size: 12px; }
+  font-size: 12px;
+  display: inline-block; }
+
+footer form {
+  display: inline-block;
+  padding-right: 30px;
+  margin-bottom: -16px; }
