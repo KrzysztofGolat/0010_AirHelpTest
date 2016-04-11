@@ -1,6 +1,7 @@
 body {
     background-color: white;
-    font-family: "Open sans", Arial, sans-serif;
+    font-family: 'Open Sans', sans-serif !important;
+    letter-spacing: -0.01em;
 }
 
 
@@ -8,7 +9,7 @@ body {
 
 
 .header {
-    padding: 25px 0;
+    padding: 18px 0;
     border-bottom: 1px solid #d2e1e6;
 }
 
@@ -16,17 +17,33 @@ body {
     text-align: left;
     display: block;
     vertical-align: middle;
+    
+    img {
+        height: 38px;
+    }
 }
 
 .header__user {
     
+    padding-right: 0px;
+    padding-top: 10px;
+    
     p {
         padding-left: 20px;
-        background: url(../img/airplane_circle_desk.png) no-repeat left center;
+//        padding-top: 12px;
+//        background: url(../img/airplane_circle_desk.png) no-repeat left center;
         float: right;
+        
+        &::before {
+            content: url(../img/airplane_circle_desk.png);
+            right: 108px;
+            margin-top: -4px;
+            position: absolute;
+        }
         
         &::after {
             content: url(../img/arrow_down_desk.png);
+            margin-left: 10px;
         }
     }
     
@@ -34,6 +51,7 @@ body {
 
 
 //****************** NAV *******************
+
 
 nav {
 /*    max-width: 100%;*/
@@ -43,22 +61,25 @@ nav {
     border: 1px;
     border-color: #d2e1e6;
     border-style: solid;
-    color: #d2e1e6;
+    color: #adb9c5;
     border-radius: 2px;
+    font-weight: 600;
+    font-size: 14px;
+    
 }
 
 .steps {
     
     div {
         position: relative;
-        padding-top: 19px;
-        padding-bottom: 19px;
+        padding-top: 22px;
+        padding-bottom: 20px;
         
         &::before {
-            border: 3px solid #d2e1e6;
+            border: 2px solid #adb9c5;
             border-radius: 100%;
-            width: 20px;
-            height: 20px;
+            width: 16px;
+            height: 16px;
             text-align: center;
             margin-right: 10px;
             vertical-align: middle;
@@ -67,7 +88,7 @@ nav {
         }
         
         &.checked:before {
-            content: url(../img/check_desk.png);
+            content: url(../img/check.png);
         }
       
         &:not(:last-child)::after {
@@ -82,12 +103,16 @@ nav {
 
 //****************** MAIN *******************
 
+
 .main__confirm {
+    height: 45px;
     background-color: #f2faf9;
-    margin-top: 35px;
+    margin-top: 40px;
     padding: 18px 10px 18px 10px;
     text-align: center;
     color: #21ad91;
+    font-weight: 600;
+    font-size: 14px;
     border-radius: 2px;
     font-size: 14px;
 }
@@ -97,7 +122,8 @@ nav {
 }
 
 h1 {
-    font-size: 22px;
+    font-size: 28px;
+    font-weight: 600;
     margin-top: 60px;
     margin-bottom: 32px;
     color: #536273;
@@ -106,14 +132,17 @@ h1 {
 .descript {
     color: #536273;
     font-size: 15px;
+    line-height: 2em;
+    font-weight: 600;
 }
 
 a, a:hover {
     color: #21ad91;
-    margin-top: 15px;
+    margin-top: 9px;
     display: block;
     margin-bottom: 75px;
     text-decoration: underline;
+    font-weight: 600;
 }
 
 .formframe {
@@ -129,24 +158,43 @@ a, a:hover {
     padding: 65px 85px 80px 85px;
 }
 
+
+//
+///*
+//.formmarg1 {
+//    margin-top: 65px;
+//}
+//*/
+//
+//.formmarg2 {
+//    margin-top: 55px;
+//    
+//}
+//
+//.form__acc-type {
+//    display: inline-block;
+//    padding-left: 10px;
+//}
+
+div.radio {
+    background-color: red;
+}
+
+.form {
+    
+    &__padd-bot1 {
+        padding-bottom: 32px;
+    }
+    
+    &__padd-bot2 {
+        padding-bottom: 20px;
+    }
+}
+
 h2 {
     font-size: 18px;
-    margin-bottom: 32px;
+    font-weight: 600;
+    margin-bottom: 35px;
+    margin-top: 30px;
     color: #536273;
-}
-
-/*
-.formmarg1 {
-    margin-top: 65px;
-}
-*/
-
-.formmarg2 {
-    margin-top: 55px;
-    
-}
-
-.form__acc-type {
-    display: inline-block;
-    padding-left: 10px;
-}
+}   
