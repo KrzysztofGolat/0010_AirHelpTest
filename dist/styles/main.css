@@ -76,7 +76,6 @@ body {
       margin-left: 10px; }
 
 nav {
-  /*    max-width: 100%;*/
   vertical-align: middle;
   text-align: center;
   margin-top: 35px;
@@ -86,22 +85,23 @@ nav {
   color: #adb9c5;
   border-radius: 2px;
   font-weight: 600;
-  font-size: 14px; }
+  font-size: 12px; }
 
 .steps div {
   position: relative;
-  padding-top: 22px;
-  padding-bottom: 20px; }
+  padding-top: 18px;
+  padding-bottom: 18px; }
   .steps div::before {
     border: 2px solid #adb9c5;
     border-radius: 100%;
-    width: 16px;
-    height: 16px;
+    width: 22px;
+    height: 22px;
     text-align: center;
     margin-right: 10px;
     vertical-align: middle;
     content: attr(data-number);
-    display: inline-block; }
+    display: inline-block;
+    padding: 3px; }
   .steps div.checked:before {
     content: url(../img/check.png); }
   .steps div:not(:last-child)::after {
@@ -120,13 +120,13 @@ nav {
   font-weight: 600;
   font-size: 14px;
   border-radius: 2px;
-  font-size: 14px; }
+  font-size: 12px; }
 
 .main__content {
   text-align: center; }
   .main__content a, .main__content a:hover {
     color: #21ad91;
-    margin-top: 9px;
+    margin-top: 8px;
     display: block;
     margin-bottom: 75px;
     text-decoration: underline;
@@ -161,6 +161,15 @@ h1 {
 div.radio {
   background-color: red; }
 
+.main__form .form-control {
+  border-radius: 0px;
+  background-color: #f9fcff;
+  height: 50px;
+  font-size: 12px; }
+
+.main__form select {
+  background-color: white !important; }
+
 .form__padd-bot1 {
   padding-bottom: 32px; }
 
@@ -173,22 +182,51 @@ div.radio {
 .form__textarea {
   height: 120px !important; }
 
+.form__info {
+  margin-top: 16px;
+  border: 2px solid #adb9c5;
+  border-radius: 100%;
+  width: 18px;
+  height: 18px;
+  text-align: center;
+  margin-right: 10px;
+  vertical-align: middle;
+  display: inline-block;
+  color: #adb9c5;
+  font-size: 12px;
+  font-family: serif;
+  font-style: italic; }
+
 .btn-secondary {
   color: white;
   font-weight: 600;
-  font-size: 12px;
+  font-size: 13px;
   width: 135px;
   height: 50px;
   float: right;
   margin-bottom: 40px;
-  background-color: #b6e2d9; }
+  background-color: #b6e2d9;
+  border-radius: 2px; }
 
-h2 {
+form h2 {
   font-size: 18px;
   font-weight: 600;
   margin-bottom: 35px;
   margin-top: 30px;
   color: #536273; }
+  form h2::before {
+    border: 2px solid #adb9c5;
+    border-radius: 100%;
+    width: 24px;
+    height: 24px;
+    text-align: center;
+    margin-right: 10px;
+    vertical-align: middle;
+    content: attr(data-number);
+    display: inline-block;
+    color: #adb9c5;
+    padding: 2px 3px;
+    font-size: 15px; }
 
 .footer {
   border-top: 1px solid #d2e1e6;
@@ -201,9 +239,11 @@ h2 {
     padding-right: 10px;
     color: #536273; }
   .footer__copyright {
-    vertical-align: bottom !important;
+    vertical-align: middle !important;
     text-align: right;
-    height: 32px; }
+    height: 32px;
+    display: inline-block;
+    padding-top: 14px; }
 
 footer .form-control {
   width: 90px;
