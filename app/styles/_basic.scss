@@ -1,24 +1,11 @@
-$brandcolor: #21ad91;
-$brancolorlight: #f2faf9;
-$gray: #d2e1e6;
-$darkgray: #536273;
-
-$bkpMobile: 768px;
-$RetinaPxlRatio: 2;
-$RetinaMinDPI: 192dpi;
-
-$imagepath: "../img/";
-
-
-
-
 body {
     background-color: white;
     font-family: 'Open Sans', serif !important;
-    letter-spacing: -0.01em;
     
-    @media (max-width: $bkpMobile) { 
-        background-color: yellow;
+    @media (max-width: $bkpMobile) {
+        width: 375px;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 
@@ -63,6 +50,9 @@ body {
         }
     }
     
+    @media (max-width: $bkpMobile) { 
+        display: none;
+    }
 }
 
 
@@ -113,6 +103,10 @@ main nav {
             right: -6px;
         }
     }
+    
+    @media (max-width: $bkpMobile) { 
+        display: none;
+    }
 }
 
 
@@ -130,6 +124,11 @@ main nav {
     font-size: 14px;
     border-radius: 2px;
     font-size: 12px;
+    
+    @media (max-width: $bkpMobile) {
+        font-size: 12px;
+        margin-bottom: 20px;
+    }
 }
 
 .main__content {
@@ -142,7 +141,13 @@ main nav {
         margin-bottom: 75px;
         text-decoration: underline;
         font-weight: 600;
+        
+        @media (max-width: $bkpMobile) {
+            margin-bottom: 20px;
+        }
     }
+    
+
 }
 
 h1 {
@@ -151,6 +156,12 @@ h1 {
     margin-top: 60px;
     margin-bottom: 32px;
     color: #536273;
+    
+    @media (max-width: $bkpMobile) {
+        margin-bottom: 10px;  
+        margin-top: 20px;
+        font-size: 20px;
+    }   
 }
 
 .descript {
@@ -158,6 +169,14 @@ h1 {
     font-size: 15px;
     line-height: 2em;
     font-weight: 600;
+    
+    @media (max-width: $bkpMobile) {
+        margin-bottom: 10px;  
+        margin-top: 20px;
+        font-size: 12px;
+        line-height: 1.4em;
+        font-weight: 600;
+    }   
 }
 
 #privacyPolicy {
@@ -176,9 +195,15 @@ h1 {
         font-weight: 400;
         color: $darkgray;
     }
+    
+    @media (max-width: $bkpMobile) {
+        display: inline;
+        
+        & > a {
+            display: inline;
+        }
+    }
 }
-
-
 
 .info {
     width: 450px;
@@ -195,7 +220,16 @@ h1 {
     z-index: 10;
     
     &:before {
-        // tym zrobić pierdolnik
+        background: url(../img/dziubekgora.png);
+        display: block; 
+        position: absolute;
+        width: 32px;
+        height: 18px;
+        content: "";
+        left: 50%;
+    //    -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+        transform: translateY(-38px);
     }
     
     .close {
@@ -231,6 +265,11 @@ h1 {
     border-radius: 2px;
     text-align: left;
     padding: 65px 85px 20px 85px;
+    
+    @media (max-width: $bkpMobile) {
+        padding: 0 20px;
+        border: 0px;
+    }
 }
 
 .main__form .form-control {
@@ -280,6 +319,10 @@ h1 {
         position: relative;
         z-index: 10;
         cursor: pointer;
+        
+        @media (max-width: $bkpMobile) {
+            position: absolute;
+        }
     }
 }
 
@@ -291,7 +334,7 @@ h1 {
     position: absolute;
     top: -180px;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-55%);
     display: none;
     border: 1px solid $gray;
     color: $darkgray;
@@ -320,7 +363,15 @@ h1 {
     }
     
     &:before {
-        // tym zrobić pierdolnik
+        background: url(../img/dziubekdol.png);
+        display: block; 
+        position: absolute;
+        width: 32px;
+        height: 18px;
+        content: "";
+        left: 50%;
+        transform: translateX(-50%);
+        transform: translateY(132px);
     }
 }
 
@@ -392,6 +443,13 @@ input[type=radio]:checked + label:before {
     margin-bottom: 40px;
     background-color: #b6e2d9;
     border-radius: 2px;
+    
+    @media (max-width: $bkpMobile) {
+        width: 330px;
+        background-color: $brandcolor;
+        margin-right: -13px;
+        margin-bottom: 0;
+    }
 }
 
 form h2 {
@@ -415,6 +473,11 @@ form h2 {
         padding: 2px 3px;
         font-size: 15px;
     }
+    
+    @media (max-width: $bkpMobile) {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
 }
     
 
@@ -429,6 +492,10 @@ form h2 {
     padding-top: 15px;
     padding-bottom: 15px;
     color: #536273;
+    
+    @media (max-width: $bkpMobile) {
+        border-top: 0px solid #d2e1e6;
+    }
     
     a {
         text-decoration: none;
@@ -449,15 +516,31 @@ form h2 {
     }
 }
 
-footer .form-control {
-    width: 90px;
-    font-size: 12px;
-    display: inline-block;
+
+
+footer {
+
+    .form-control {
+        width: 90px;
+        font-size: 12px;
+        display: inline-block;
+    }
+
+    form {
+        display: inline-block;
+        padding-right: 30px;
+        margin-bottom: -16px;
+    }
+    
+    @media (max-width: $bkpMobile) { 
+        .col-xs-10 {
+            display: none;
+        }
+    }
 }
 
-footer form {
-    display: inline-block;
-    padding-right: 30px;
-    margin-bottom: -16px;
+.copy {
+    @media (max-width: $bkpMobile) { 
+        margin-left: 130px;
+    }
 }
-    
