@@ -22,9 +22,6 @@ body {
         
         @media (max-width: $bkpMobile) {
             display: inline-block;
-//            width: 30px;
-//            height: 30px;
-//            vertical-align: middle;
         }
     }
 }
@@ -36,8 +33,6 @@ body {
     
     img {
         height: 38px;
-        
-
     }
 }
 
@@ -240,7 +235,6 @@ h1 {
         height: 18px;
         content: "";
         left: 50%;
-    //    -webkit-transform: translateX(-50%);
         transform: translateX(-50%);
         transform: translateY(-38px);
     }
@@ -268,7 +262,6 @@ h1 {
 
 .formframe {
     max-width: 100%;
-/*    vertical-align: middle;*/
     margin-top: 35px;
     margin-bottom: 80px;
     border: 1px;
@@ -395,7 +388,7 @@ h1 {
 }
 
 .acctype {
-    font-size: 14px;
+        font-size: 14px;
     }
 
 label.check-radio {
@@ -410,12 +403,10 @@ label.check-radio {
     &:before {
         content: "";
         display: inline-block;
-
         width: 18px;
         height: 18px;
         border-radius: 100%;
         border: 2px solid $brandcolor;
-
         margin-right: 10px;
         position: absolute;
         left: 0;
@@ -500,8 +491,6 @@ form h2 {
 }
     
 
-    
-
 // ****************** FOOTER  *******************
 
 
@@ -535,10 +524,8 @@ form h2 {
     }
 }
 
-
-
 footer {
-
+    
     .form-control {
         width: 90px;
         font-size: 12px;
