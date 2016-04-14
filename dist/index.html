@@ -12,7 +12,9 @@
     
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
     
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">    
+    
+<!--    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">-->
     
     <link type="text/css" rel="stylesheet" href="styles/main.css">
     
@@ -42,17 +44,20 @@
 <!--    ************************* MAIN ******************* -->
     
     <main class="container">
+        
         <nav class="row steps">
-            <div data-number="1" class="col-md-4 checked">Choose payout method</div>
+            <div data-number="1" class="col-sm-4 checked">Choose payout method</div>
 
-            <div class="col-md-4" data-number="2">Set up payout method</div>
+            <div class="col-sm-4" data-number="2">Set up payout method</div>
 
-            <div class="col-md-4" data-number="3">Review and confirm</div>
+            <div class="col-sm-4" data-number="3">Review and confirm</div>
         </nav>
+        
         
         <div class="row">
             <div class="col-md-12 main__confirm">You selected Bank Transfer.</div>
         </div>
+        
         
         <div class="row">
             
@@ -62,28 +67,32 @@
 
                 <p class="descript">In order to send you your compensation, we need your bank account information. Rest assured, your banking details are safe and secure and we never share your information with third parties.</p>
 
-                <a href="/.">View privacy policy</a>
+                <div id="privacyPolicy">
+                    <a href="#" >View privacy policy</a>
+                    <div class="info">
+                        <a href="#" class="close"></a>
+                        <h3>Privacy Policy</h3>
+                        <p>The Client provides AirHelp with personal data under the Personal Data Protection Act or other data protection laws that may be applicable with the explicit permission to process the personal data given and for use thereof in the context of the Agreement. </p>
+                    </div>
+                </div>
 
                 <div class="formframe">
             
-                    <form class="main__form">
+                    <form class="main__form" id="airhelpform">
                         <div class="form-group row">
+                            
                             <label class="col-sm-12">
                                 <h2 data-number="1"> Account type</h2>
                             </label>
 
-                            <div class="col-sm-4">
-                                <label>
-                                    <input type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
-                                    Personal account 
-                                </label>
+                            <div class="col-sm-5 acctype">
+                                <input type="radio" name="gridRadios" id="persacc" value="personalacc" checked />
+                                <label for="persacc" class="check-radio">Personal account</label>
                             </div>
 
-                            <div class="col-sm-4">
-                                <label>
-                                    <input type="radio" name="gridRadios" id="gridRadios2" value="option2">
-                                    Business account
-                                </label>
+                            <div class="col-sm-5 acctype">
+                                <input type="radio" name="gridRadios" id="busacc" value="businessacc">
+                                <label for="busacc" class="check-radio">Business account</label>
                             </div>
                         </div>
 
@@ -95,34 +104,34 @@
 
                         <div class="row form__padd-bot1">
                             <div class="col-xs-6">
-                                <input type="text" class="form-control" placeholder="First name">
+                                <input type="text" class="form-control" placeholder="First name" required minlength="2" type="text">
                             </div>
                             <div class="col-xs-6">
-                                <input type="text" class="form-control" placeholder="Last name">
+                                <input type="text" class="form-control" placeholder="Last name" required  type="text">
                             </div>
                         </div>       
 
                         <div class="row form__padd-bot2">
                             <div class="col-xs-6">
-                                <input type="text" class="form-control" placeholder="Adress">
+                                <input type="text" class="form-control" placeholder="Adress"  type="text">
                             </div>
                             <div class="col-xs-6">
-                                <input type="text" class="form-control" placeholder="Adress 2 (optional)">
+                                <input type="text" class="form-control" placeholder="Adress 2 (optional)"  type="text">
                             </div>
                         </div>  
 
                         <div class="row form__padd-bot2">
                             <div class="col-xs-6">
-                                <input type="text" class="form-control" placeholder="City">
+                                <input type="text" class="form-control" placeholder="City" minlength="2" type="text">
                             </div>
                             <div class="col-xs-6">
-                                <input type="text" class="form-control" placeholder="State (optional)">
+                                <input type="text" class="form-control" placeholder="State (optional)" type="text">
                             </div>
                         </div> 
 
                         <div class="row form__padd-bot2">
                             <div class="col-xs-6">
-                                <input type="text" class="form-control" placeholder="Zip code">
+                                <input type="text" class="form-control" placeholder="Zip code" type="text">
                             </div>
                             <div class="col-xs-6">
                                 <select class="form-control">          
@@ -139,7 +148,9 @@
 
 
                         <div class="row">
-                            <div class="col-xs-8 form__padd-bot2">
+                            <div class="col-xs-11  col-xs-1-offset
+                                        col-sm-10 col-sd-2-offset 
+                                        col-md-8 col-md-4-offset form__padd-bot2">
                               <select class="form-control">          
                                 <option default>Country of your bank</option>
                                 <option default>Poland</option>
@@ -148,33 +159,41 @@
                         </div>  
 
                         <div class="row">
-                            <div class="col-xs-8  form__padd-bot2">
+                            <div class="col-xs-11  col-xs-1-offset
+                                        col-sm-10 col-sd-2-offset 
+                                        col-md-8 col-md-4-offset  form__padd-bot2">
                                 <input type="text" class="form-control" placeholder="BIC / SWIFT code">
                             </div>
                         </div>  
 
                         <div class="row">
-                            <div class="col-xs-8 form__padd-bot2">
+                            <div class="col-xs-11  col-xs-1-offset
+                                        col-sm-10 col-sd-2-offset 
+                                        col-md-8 col-md-4-offset form__padd-bot2">
                                 <input type="text" class="form-control" placeholder="IBAN (bank account number)">
                             </div>
                             <div class="form__info">i</div>
                         </div>  
 
 
-                    <div class="row">
-                          <fieldset class="col-xs-12 form__padd-bot3">
-                                <textarea class="form-control form__textarea" id="textarea" rows="4" placeholder="Additional information (optional)"></textarea>
-                        </fieldset>
-                    </div>
+                        <div class="row">
+                              <fieldset class="col-xs-12 form__padd-bot3">
+                                    <textarea class="form-control form__textarea" id="textarea" rows="4" placeholder="Additional information (optional)"></textarea>
+                            </fieldset>
+                        </div>
 
 
                         <div class="form-group row">
+
                             <div class="col-sm-offset-2 col-sm-10">
-                                <button type="submit" class="btn btn-secondary">Sign in</button>
-                            </div>
+                                <input type="submit" class="btn btn-secondary" value="Sign in"/>
+                                
+<!--                                <input class="submit" type="submit" value="Submit"/>-->
+                            
                         </div>
 
                     </form>
+
 
                 </div>  
             </div>
@@ -213,17 +232,40 @@
 
             </div>
 
-            <div class="col-xs-2">
-                <div class="footer__copyright">(c) 2016 AirHelp</div>
+            <div class="col-xs-2 footer__copyright">
+                <div>(c) 2016 AirHelp</div>
             </div>
 
         </footer>    
     </div>
 
         
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+        
+    <script src="js/jquery.validate.js"></script>
 
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <!--    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>-->
+        
+    <script src="/js/bootstrap.min.js"></script>
+        
+    <script>
+        $(document).ready(function() {
+            
+            $("#airhelpform").validate();
+            
+            $('#privacyPolicy a:not(.close)').on('click', function(event) {
+                event.preventDefault();
+               $(this).next().show(); 
+            });
+            
+            $('.close').on('click', 
+            function(event) {
+                event.preventDefault();
+                $('#privacyPolicy .info').hide();
+            });
+                
+        });
+    </script>
 
 </body>
 </html>
