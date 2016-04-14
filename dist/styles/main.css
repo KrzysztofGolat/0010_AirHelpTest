@@ -56,6 +56,11 @@ body {
 .header {
   padding: 18px 0;
   border-bottom: 1px solid #d2e1e6; }
+  .header__hamburger {
+    display: none; }
+    @media (max-width: 768px) {
+      .header__hamburger {
+        display: inline-block; } }
 
 .header__logo {
   text-align: left;
@@ -289,6 +294,10 @@ h1 {
   @media (max-width: 768px) {
     .form__info {
       position: absolute; } }
+
+@media (max-width: 768px) {
+  .form__first {
+    margin-bottom: 20px; } }
 
 .ibaninfo {
   width: 350px;

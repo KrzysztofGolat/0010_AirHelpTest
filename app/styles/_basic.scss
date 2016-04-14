@@ -16,6 +16,17 @@ body {
 .header {
     padding: 18px 0;
     border-bottom: 1px solid #d2e1e6;
+    
+    &__hamburger {
+        display: none;
+        
+        @media (max-width: $bkpMobile) {
+            display: inline-block;
+//            width: 30px;
+//            height: 30px;
+//            vertical-align: middle;
+        }
+    }
 }
 
 .header__logo {
@@ -25,6 +36,8 @@ body {
     
     img {
         height: 38px;
+        
+
     }
 }
 
@@ -322,6 +335,12 @@ h1 {
         
         @media (max-width: $bkpMobile) {
             position: absolute;
+        }
+    }
+    
+    &__first {
+        @media (max-width: $bkpMobile) {
+            margin-bottom: 20px;
         }
     }
 }
